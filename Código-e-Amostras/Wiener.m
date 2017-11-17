@@ -51,7 +51,7 @@ Sk = S_mag.*exp(phases.*sqrt(-1));
 speech_wiener = ifft(Sk);
 filtered_speech_wiener = OverlapAdd(speech_wiener, split_length, overlap_length, Fs, size(y,1));
 
-fileoutput = 'Filtro_Wiener.wav';
+fileoutput = 'Filtro-Wiener.wav';
 audiowrite(fileoutput,filtered_speech_wiener,Fs);
 
 
